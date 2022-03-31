@@ -20,7 +20,8 @@
                      type="texte" 
                      name="title" 
                      placeholder="Title" 
-                     required maxlength="50">
+                     required maxlength="50"
+                     value="<?= isset($article) ? $_POST['title'] : '' ?>" /> <!-- ? = If isset($article) = true on affiche la valeur du $_POST['title'] Sinon = : on affiche rien -->
                 </label>
                 <?php if(isset($validation) && isset($validation['title'])): ?>  <!-- Verifie si $validation est occuper si il est il affiche une erreur étant donner qu'il devrais ne pas etre remplis voir function validateInputs($inputs){ -->
                     <p><?= $validation['title'] ?></p>
@@ -33,9 +34,7 @@
                     <textarea
                     class="form-control"
                     name="content"
-                    required
-                    maxlength="1000">
-                   </textarea>
+                    maxlength="1000"><?= isset($article) ? $_POST['content'] : '' ?></textarea>
                 </label>
                 <?php if(isset($validation) && isset($validation['content'])): ?> <!-- Verifie si $validation est occuper si il est il affiche une erreur étant donner qu'il devrais ne pas etre remplis voir function validateInputs($inputs){ -->
                     <p><?= $validation['content'] ?></p>
