@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-<?php $title="Création article"; require "../head.php"; ?>
+<?php $title="Création d'article"; require "../head.php"; ?>
 <body>
     <?php require "../header.php"; ?>
 
@@ -12,7 +12,7 @@
             method="POST"
             enctype="multipart/form-data"
             >
-
+            
             <div class="form-group">
                 <label>
                     Title 
